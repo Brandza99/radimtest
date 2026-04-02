@@ -1,4 +1,2 @@
-console.log("Hello git");
-console.log("Login feature");
-console.log("Nova promena");
+console.log("CI TEST RADI");
 
