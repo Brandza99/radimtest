@@ -1,0 +1,19 @@
+name: CI Test
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run test
+        run: echo "Aplikacija radi!"
+
+      - name: Run Node
+        run: node app.js
