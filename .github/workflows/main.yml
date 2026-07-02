@@ -21,4 +21,14 @@ jobs:
         run: echo "Deploy started"
 
       - name: Build Docker image
-        run: docker build -t gha-refresh-test .
+        run: docker build -t gha-refresh-test:v1
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Push Docker image
+        run: docker push brandza99/gha-refresh-test:v1
+
