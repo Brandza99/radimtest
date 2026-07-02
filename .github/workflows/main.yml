@@ -1,0 +1,23 @@
+name: Github Actions Refresh
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  ime_joba:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Print Project files
+        run: ls -la
+
+      - name: Print fake build message
+        run:  echo "Build started"
+
+      - name: Print fake deploy message
+        run: echo "Deploy started"
+
+
