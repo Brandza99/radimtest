@@ -7,6 +7,7 @@ on:
 jobs:
   ime_joba:
     runs-on: ubuntu-latest
+    environment: Master
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
