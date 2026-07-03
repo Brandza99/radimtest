@@ -1,12 +1,13 @@
 name: Github Actions Refresh
 
 on:
-env:
-  DOCKER_IMAGE: brandza99/gha-refresh-test
-  IMAGE_TAG: v4
   push:
     branches:
       - master
+env:
+  DOCKER_IMAGE: brandza99/gha-refresh-test
+  IMAGE_TAG: v4
+
 jobs:
   ime_joba:
     runs-on: ubuntu-latest
