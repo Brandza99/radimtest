@@ -13,7 +13,7 @@ on:
 
 env:
   DOCKER_IMAGE: brandza99/gha-refresh-test
-  IMAGE_TAG: ${{ github.event.inputs.image_tag || 'v5' }}
+  IMAGE_TAG: ${{ github.event.inputs.image_tag || 'v6' }}
 
 jobs:
   ime_joba:
