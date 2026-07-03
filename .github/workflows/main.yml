@@ -5,10 +5,15 @@ on:
     branches:
       - master
   workflow_dispatch:
+    inputs:
+      image_tag:
+        description: "DOcker image tag"
+        required: true
+        default: "v5"
 
 env:
   DOCKER_IMAGE: brandza99/gha-refresh-test
-  IMAGE_TAG: v4
+  IMAGE_TAG: ${{ github.event.inputs.image_tag || 'v5' }}
 
 jobs:
   ime_joba:
@@ -36,7 +41,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Push Docker image v3
+      - name: Push Docker image v5
         run: docker push $DOCKER_IMAGE:$IMAGE_TAG
 
       - name: Push Docker image latest
