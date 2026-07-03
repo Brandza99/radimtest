@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+
 env:
   DOCKER_IMAGE: brandza99/gha-refresh-test
   IMAGE_TAG: v4
