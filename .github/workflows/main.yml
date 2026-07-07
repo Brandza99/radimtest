@@ -12,7 +12,7 @@ on:
         default: "v5"
 
 env:
-  DOCKER_IMAGE: brandza99/nepostojeci-repo-test
+  DOCKER_IMAGE: neki-tudji-username/gha-refrest-test
   IMAGE_TAG: ${{ github.event.inputs.image_tag || 'v6' }}
 
 jobs:
